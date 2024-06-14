@@ -102,5 +102,22 @@ namespace cs0614
                 MessageBox.Show($"{i}");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int i;
+            for(i = 0; i < 10;i++)
+            {
+                if (i == 2)
+                {
+                    continue;
+                }
+                if(i == 5)
+                {
+                    break;
+                }
+                MessageBox.Show(i.ToString() );
+            }
+        }
     }
 }
