@@ -2,14 +2,15 @@ namespace cs0614
 {
     public partial class Form1 : Form
     {
+        static int Chrmax => 100;
         static Random random = new Random();
-        int[] vx = new int[3];
-        int[] vy = new int[3];
-        Label[] labels = new Label[100];
+        int[] vx = new int[Chrmax];
+        int[] vy = new int[Chrmax];
+        Label[] labels = new Label[Chrmax];
         public Form1()
         {
             InitializeComponent();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < Chrmax; i++)
             {
                 labels[i] = new Label();
                 labels[i].AutoSize = true;
@@ -46,7 +47,7 @@ namespace cs0614
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < Chrmax; i++)
             {
                 labels[i].Left += vx[i];
                 labels[i].Top += vy[i];
